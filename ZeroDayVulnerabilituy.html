@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zero-Day Vulnerability Found in Popular Browser: Urgent Patch Released</title>
+        <link rel="icon" type="image/x-icon" href="../images/SPECX Favicon (48 x 48 px).png">
+        <link rel="stylesheet" href="../SPECX/css/newsLayout.css">
+
+        <script>
+        // Define the custom function
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+            
+        <style>
+            /* Basic Article Layout Styles */
+            .article-content {
+                max-width: 800px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #fff; /* Assuming a light background for the article text */
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            .article-content h1 {
+                font-family: 'Times New Roman', serif;
+                font-size: 2.8em;
+                color: #333;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            .byline, .dateline {
+                font-size: 0.9em;
+                color: #666;
+                text-align: center;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .lead-paragraph {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin: 25px 0;
+                line-height: 1.5;
+                color: #1a1a1a;
+            }
+            .article-image-container {
+                margin: 20px 0;
+                text-align: center; /* Center the image within the container */
+            }
+            .article-image-container img {
+                max-width: 100%; /* Ensures the image scales down if the screen is too small */
+                height: auto;
+                border-radius: 8px; /* Soft edges for modern look */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle depth */
+            }
+            .image-caption {
+                display: block;
+                font-size: 0.85em;
+                color: #666;
+                margin-top: 10px;
+                font-style: italic;
+            }
+            .article-content h2 {
+                font-size: 1.6em;
+                color: #ac7aed; /* Your primary color */
+                border-left: 4px solid #ac7aed;
+                padding-left: 10px;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+            .article-content p {
+                margin-bottom: 20px;
+                text-align: justify;
+                line-height: 1.7;
+            }
+            .article-content blockquote {
+                font-style: italic;
+                border-left: 4px solid #ccc;
+                padding-left: 15px;
+                margin: 20px 0;
+                background-color: #f9f9f9;
+            }
+            .article-content ul {
+                padding-left: 25px;
+            }
+            .back-button {
+                display: block; /* Makes it take up full width for centering */
+                max-width: 800px;
+                margin: 20px auto 0;
+                padding: 10px 15px;
+                background-color: #ac7aed; /* Your primary color */
+                color: white;
+                text-decoration: none;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1em;
+                font-weight: bold;
+                transition: background-color 0.3s;
+                text-align: center;
+            }
+            .back-button:hover {
+                background-color: #9263dc; /* Slightly darker shade on hover */
+            }
+        </style>
+    </head>
+    <body>
+        
+       <div id="grad1">
+            <a href="index.html">Home</a>
+            <a class="active" href="news.html" style="color: #ac7aed;" onmouseover="this.style.color='aliceblue';" onmouseout="this.style.color='#ac7aed';">News</a>
+            <a href="products.html ">Products</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <form class="search-bar" action="/search" method="get">
+                <input type="text" placeholder="Search..." name="q">
+                <button type="submit">Search</button>
+            </form>
+            <a class="login-link" href="login.html">Login</a>
+            <a class="login-link" href="CreateAccount.html">Create Account</a>
+        </div>
+        
+        <div class="article-content">
+            <article>
+                <h1>Zero-Day Vulnerability Found in Popular Browser: Urgent Patch Released</h1>
+                <p class="byline">By: <strong>Cybersecurity Alert Team</strong></p>
+                <p class="dateline">MOUNTAIN VIEW, CA, October 11, 2025</p>
+
+                <figure class="article-image-container">
+                    <img src="images\Zero_Day_Image.png" alt="Stylized image of a broken digital padlock over a glowing web background, symbolizing a security breach." />
+                    <figcaption class="image-caption">
+                        The critical zero-day exploit targeted a vulnerability in the browser's V8 JavaScript engine, affecting millions of users globally. (Credit: SecureTech Foundation)
+                    </figcaption>
+                </figure>
+
+                <p class="lead-paragraph">
+                    A critical **zero-day vulnerability** has been discovered and actively exploited in the widely used web browser, **WebSurfer**. The browser's developer has released an immediate, out-of-band security patch and is urging all users to update their software **immediately** to prevent potential remote code execution attacks.
+                </p>
+
+                <p>
+                    The vulnerability, tracked as **CVE-2025-9001**, is a high-severity bug within the browser's JavaScript V8 engine. Security researchers noted that successful exploitation allows attackers to execute arbitrary code on the affected user's machine simply by tricking them into visiting a maliciously crafted website. Initial reports suggest limited, targeted attacks are already underway.
+                </p>
+
+                <h2>Technical Details and Exploitation</h2>
+
+                <p>
+                    The zero-day is specifically a **use-after-free (UAF)** bug, a memory corruption vulnerability that occurs when a program continues to use a pointer to memory after it has been freed. This allows an attacker to hijack the program's control flow.
+                </p>
+                <ul>
+                    <li>**Vulnerability Type:** Use-After-Free in the V8 Engine.</li>
+                    <li>**Severity Rating:** Critical (CVSS Score: 9.8).</li>
+                    <li>**Affected Versions:** WebSurfer versions 120.0.0 through 122.5.0.</li>
+                    <li>**Fix Released In:** WebSurfer version 122.5.1.</li>
+                </ul>
+
+                <p>
+                    "This is the most severe type of browser vulnerability because the attack requires minimal user interaction and grants deep system access," stated Dr. Alistair Chen, lead analyst at the Global Cyber Defense Center (GCDC). "The speed of the patch release is commendable, but the window of risk remains high until global adoption of the update is achieved."
+                </p>
+
+                <blockquote>
+                    "This is the most severe type of browser vulnerability because the attack requires minimal user interaction and grants deep system access." — Dr. Alistair Chen, Lead Analyst, GCDC.
+                </blockquote>
+
+                <h2>Urgent Call to Action for Users</h2>
+
+                <p>
+                    The developer is strongly recommending that all users, regardless of operating system (Windows, macOS, Linux, and mobile), verify that their browser has automatically updated to version **122.5.1** or later. Most browsers are configured to update automatically, but users are advised to manually trigger the update process immediately.
+                </p>
+
+                <p>
+                    **How to Check and Update:**
+                    <ol>
+                        <li>Navigate to the 'Help' or 'About WebSurfer' section in the browser menu.</li>
+                        <li>The browser will automatically check for and initiate the download of the latest patch.</li>
+                        <li>Restart the browser completely to finalize the installation.</li>
+                    </ol>
+                </p>
+                
+                <h2>Protecting Yourself Against Zero-Days</h2>
+
+                <p>
+                    While the patch is the ultimate fix, users should remain vigilant. Cybersecurity experts recommend avoiding suspicious links, particularly those received in unsolicited emails or messages, until the browser update is confirmed. Enterprise environments should push the update across all network endpoints as part of their emergency patch management protocols. This incident serves as a stark reminder of the continuous, high-stakes battle against zero-day exploits.
+                </p>
+
+                <p style="text-align: right; margin-top: 30px; font-style: italic;">— End of Article —</p>
+                <a href="javascript:history.back()" class="back-button">Back to News</a>
+            </article>
+            
+        </div>
+        <footer class="modern-footer">
+            <div class="footer-container">
+
+                <div class="footer-section footer-contact">
+                    <h3>SPECX</h3>
+                    <p>Your destination for gaming enthusiasts.</p>
+                    <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+                </div>
+
+                <div class="footer-section footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                        <li><a href="TermsOfUse.html">Terms of Use</a></li>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SPECX. All rights reserved.</p>
+                <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

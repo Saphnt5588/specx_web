@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="images\SPECX Favicon (48 x 48 px).png">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div id="grad1">
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="products.html">Products</a>
+    <a href="aboutUs.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <form class="search-bar" action="/search" method="get">
+      <input type="text" placeholder="Search..." name="q">
+      <button type="submit">Search</button>
+    </form>
+    <a class="login-link active" href="login.html" style="color: #ac7aed;">Login</a>
+    <a class="login-link" href="CreateAccount.html">Create Account</a>
+  </div>
+
+  <main class="login-container">
+    <h2>Login to SPECX</h2>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Enter username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" required>
+
+      <button type="submit">Login</button>
+      <p id="errorMsg" class="error"></p>
+    </form>
+  </main>
+
+  <footer class="modern-footer">
+    <div class="footer-container">
+
+        <div class="footer-section footer-contact">
+            <h3>SPECX</h3>
+            <p>Your destination for gaming enthusiasts.</p>
+            <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Use</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 SPECX. All rights reserved.</p>
+        <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+    </div>
+</footer>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

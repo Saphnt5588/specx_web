@@ -1,0 +1,363 @@
+/* --- Global Styles & Base --- */
+
+body {
+    background-color: aliceblue;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header and Nav Bar --- */
+#grad1 {
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #3335cd, #000000);
+}
+
+#grad1 a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+#grad1 a.login-link {
+    float: right;
+}
+
+/* Ensure the active 'About Us' link uses the desired colors without inline styles */
+a.active.about-link {
+    background-color: aliceblue;
+    color: #ac7aed !important; 
+}
+
+a.active.about-link:hover {
+    color: aliceblue !important;
+    background-color: #8ae2eb;
+}
+
+#grad1 a:hover {
+    background-color: #8ae2eb;
+    color: black;
+}
+
+/* Search Bar */
+.search-bar {
+    float:left;
+    padding: 10px 16px;
+    margin: 10px;
+}
+
+.search-bar input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ac7aed;
+    color: aliceblue;
+}
+
+/* --- ABOUT US SPECIFIC STYLES --- */
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #ac7aed;
+}
+
+.about-hero h1 {
+    font-size: 2.5em;
+    color: #3335cd;
+    margin-bottom: 15px;
+}
+
+.about-hero .subtitle {
+    font-size: 1.2em;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 2. Core Values/Mission Section (2-column grid) */
+.core-values-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.value-card {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h2 {
+    color: #3335cd;
+    border-bottom: 2px solid #8ae2eb;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.secondary-card {
+    background-color: #f5f8ff; /* Light accent background */
+}
+
+.value-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.value-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px dotted #e0e0e0;
+    font-size: 1.05em;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ac7aed;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ac7aed;
+    color: aliceblue;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3335cd;
+}
+
+/* 3. Team Section (2-member specific layout) */
+.team-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    /* Two columns for the two team members */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    /* Center the two team members horizontally */
+    max-width: 700px; /* Reduced max-width for better centering of two items */
+    margin: 0 auto; 
+    justify-content: center; 
+}
+
+.team-member {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 0 auto 15px;
+    border: 3px solid #ac7aed; 
+}
+
+.team-member h3 {
+    margin: 5px 0;
+    color: #ac7aed;
+    font-size: 1.2em;
+}
+
+.team-member .role {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.team-member .bio {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* --- Footer --- */
+/* --- BASE FOOTER STYLES --- */
+.modern-footer {
+    background-color: #1a1a1a; /* Dark background is sleek and modern */
+    color: #f0f0f0; /* Light text for high contrast */
+    padding: 40px 20px 20px; /* Generous padding */
+    font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* --- MAIN CONTAINER (for Flexbox layout) --- */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- SECTION STYLES --- */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too narrow */
+    margin: 15px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+    color: #ac7aed; /* A pop of accent color (e.g., green for gaming/tech) */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- LINK STYLES --- */
+.modern-footer a {
+    color: #cccccc; /* Slightly darker link color */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.modern-footer a:hover {
+    color: #4CAF50; /* Highlight color on hover */
+    text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.social-links a:hover {
+    color: #ac7aed;
+    transform: scale(1.1);
+}
+
+/* --- RESOURCE LINKS (Vertical List) --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom .credit a {
+    color: #999;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+
+/* --- RESPONSIVENESS (Media Queries) --- */
+
+/* Tablet View */
+@media (max-width: 900px) {
+    .core-values-section {
+        grid-template-columns: 1fr; /* Stack mission and principles */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack team members vertically */
+        max-width: 400px; /* Constrain width when stacked */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+    /* Stack navigation items for better mobile usability */
+    #grad1 {
+        height: auto;
+    }
+    #grad1 a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    #grad1 a.login-link {
+        float: none;
+    }
+    .search-bar {
+        float: none;
+        width: calc(100% - 32px);
+        margin: 0;
+        padding: 10px 16px;
+    }
+    .search-bar input[type="text"], .search-bar button {
+        width: calc(50% - 18px);
+        box-sizing: border-box;
+    }
+
+    .about-hero h1 {
+        font-size: 1.8em;
+    }
+}

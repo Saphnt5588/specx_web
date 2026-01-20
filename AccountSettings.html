@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings - SPECX</title>
+    <link rel="icon" type="image/x-icon" href="images\SPECX Favicon (48 x 48 px).png">
+    <style>
+        /*
+        NOTE: All required CSS (Header, Footer, Body, and Settings-specific styles)
+        would go here or be linked in a separate stylesheet (styles.css).
+        For this standalone example, I've included the core CSS.
+        */
+        
+        /* Header and nav bar*/
+        #grad1 {
+            overflow: hidden;
+            height: 60px;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #3335cd, #000000);
+        }
+
+        #grad1 a {
+            float: left;
+            display: block;
+            text-align: center;
+            padding: 20px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            color: aliceblue;
+        }
+
+        #grad1 a.login-link {
+            float: right;
+        }
+
+        #grad1 a:hover {
+            background-color: #8ae2eb;
+            color: aliceblue;
+        }
+
+        .active {
+            background-color: aliceblue;
+            color: #ac7aed;
+        }
+        
+        /* New CSS for the Search Bar */
+        .search-bar {
+            float:left;
+            padding: 10px 16px; 
+            margin: 10px; 
+            
+        }
+
+        .search-bar input[type="text"] {
+            border: 1px solid #ccc;
+            border-radius: 20px; 
+            padding: 8px 15px;
+            outline: none;
+        }
+
+        .search-bar button {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #ac7aed;
+            color: aliceblue;
+        }
+        /*Body*/
+        body {
+            background-color: aliceblue;
+            color: #333;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* --- BASE FOOTER STYLES --- */
+        .modern-footer {
+            background-color: #1a1a1a; 
+            color: #f0f0f0; 
+            padding: 40px 20px 20px; 
+            font-family: 'Arial', sans-serif; 
+        }
+
+        /* --- MAIN CONTAINER (for Flexbox layout) --- */
+        .footer-container {
+            display: flex;
+            justify-content: space-around; 
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #333; 
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap; 
+        }
+
+        /* --- SECTION STYLES --- */
+        .footer-section {
+            flex: 1;
+            min-width: 200px; 
+            margin: 15px;
+        }
+
+        .footer-section h3, 
+        .footer-section h4 {
+            color: #ac7aed; 
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* --- LINK STYLES --- */
+        .modern-footer a {
+            color: #cccccc; 
+            text-decoration: none; 
+            transition: color 0.3s ease;
+        }
+
+        .modern-footer a:hover {
+            color: #4CAF50; 
+            text-decoration: underline; 
+        }
+
+        /* --- RESOURCE LINKS (Vertical List) --- */
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        /* --- BOTTOM COPYRIGHT BAR --- */
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* --- ACCOUNT SETTINGS STYLES --- */
+        .settings-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-container h2 {
+            color: #3335cd;
+            border-bottom: 2px solid #ac7aed;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Settings Nav will look different now, just having one item */
+        .settings-nav {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .settings-nav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .settings-nav a.current {
+            color: #ac7aed;
+            border-bottom: 3px solid #ac7aed;
+        }
+
+        .settings-section h3 {
+            color: #3335cd;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="password"] {
+            width: calc(100% - 24px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .settings-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background-color: #ac7aed;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .settings-button:hover {
+            background-color: #3335cd;
+        }
+
+        .delete-button {
+            background-color: #d9534f;
+        }
+        
+        .delete-button:hover {
+            background-color: #c9302c;
+        }
+
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        
+        .slider {
+             /* Placeholder for full slider styles */
+        }
+    </style>
+</head>
+<body>
+    
+    <header id="grad1">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="products.html">Products</a>
+            <a href="#">Settings</a> 
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <form class="search-bar" action="/search" method="get">
+            <input type="text" placeholder="Search..." name="q">
+            <button type="submit">Search</button>
+        </form>
+        <a class="login-link" href="login.html">Login</a>
+        <a class="login-link active" href="CreateAccount.html">Create Account</a>
+    </header>
+
+    <main class="settings-container">
+        <h2>Account Settings</h2>
+
+        <nav class="settings-nav">
+            <a href="#" class="current">Profile</a>
+        </nav>
+
+        <section class="settings-section">
+            <h3>Personal Information</h3>
+            <form action="/update-profile" method="POST">
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" value="user_name_123" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" value="user@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" value="Jane Doe">
+                </div>
+                
+                <button type="submit" class="settings-button">Save Profile</button>
+            </form>
+        </section>
+
+        <hr>
+        
+        <section class="settings-section">
+            <h3>Change Password</h3>
+            <form action="/change-password" method="POST">
+                <div class="form-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password" name="current-password" placeholder="Enter current password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="Enter new password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm New Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm new password" required>
+                </div>
+                
+                <button type="submit" class="settings-button">Change Password</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="settings-section">
+            <h3>Danger Zone</h3>
+            <p>Permanently delete your account and all associated data. This action is irreversible.</p>
+            <button class="settings-button delete-button">Delete Account</button>
+        </section>
+
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-container">
+
+            <div class="footer-section footer-contact">
+                <h3>SPECX</h3>
+                <p>Your destination for gaming enthusiasts.</p>
+                <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                    <li><a href="TermsOfUse.html">Terms of Use</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SPECX. All rights reserved.</p>
+            <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="images\SPECX Favicon (48 x 48 px).png">
+    <meta
+      name="description"
+      content="Get in touch with the SPECX team for news tips, feedback, or general inquiries."
+    />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+
+  <body>
+    <header id="grad1">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="news.html">News</a>
+                <a href="products.html">Products</a>
+                <a href="aboutUs.html">About Us</a>
+                <a class="active" href="contact.html"  style="color: #ac7aed;" onmouseover="this.style.color='aliceblue';" onmouseout="this.style.color='#ac7aed';">Contact</a>
+            </nav>
+
+            <form class="search-bar" action="/search" method="get">
+                <input type="text" placeholder="Search..." name="q">
+                <button type="submit">Search</button>
+            </form>
+            <a class="login-link" href="login.html">Login</a>
+            <a class="login-link" href="CreateAccount.html">Create Account</a>
+        </header>
+
+    <main>
+      <h3>Contact Form</h3>
+
+      <div class="container">
+        <form action="/action_page.php" method="post">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+            required
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height:200px"
+            required
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+
+    <footer class="modern-footer">
+    <div class="footer-container">
+
+        <div class="footer-section footer-contact">
+            <h3>SPECX</h3>
+            <p>Your destination for gaming enthusiasts.</p>
+            <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+              <li><a href="TermsOfUse.html">Terms of Use</a></li>
+              <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 SPECX. All rights reserved.</p>
+        <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+    </div>
+</footer>
+  </body>
+</html>

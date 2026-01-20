@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - SPECX</title>
+    <link rel="icon" type="image/x-icon" href="images\SPECX Favicon (48 x 48 px).png">
+    <link rel="stylesheet" href="css/login.css">
+    </head>
+<body>
+    <div id="grad1">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="products.html">Products</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <form class="search-bar" action="/search" method="get">
+            <input type="text" placeholder="Search..." name="q">
+            <button type="submit">Search</button>
+        </form>
+        <a class="login-link" href="login.html">Login</a>
+        <a class="login-link active" href="CreateAccount.html" style="color: #ac7aed;">Create Account</a>
+    </div>
+
+    <main class="login-container">
+        <h2>Create Your SPECX Account</h2>
+        <form id="createAccountForm">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="newUsername">Username</label>
+            <input type="text" id="newUsername" placeholder="Choose a username" required>
+
+            <label for="newPassword">Password</label>
+            <input type="password" id="newPassword" placeholder="Create password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Re-enter password" required>
+            
+            <div class="terms-checkbox">
+                <input type="checkbox" id="agreeTerms" required>
+                <label for="agreeTerms">I agree to the <a href="TermsOfUse.html" target="_blank">Terms of Use</a> and <a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a>.</label>
+            </div>
+
+            <button type="submit">Register</button>
+            <p id="errorMsg" class="error"></p>
+            <p class="switch-link">
+                Already have an account? <a href="login.html">Login here</a>.
+            </p>
+        </form>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-contact">
+                <h3>SPECX</h3>
+                <p>Your destination for gaming enthusiasts.</p>
+                <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+            </div>
+
+            <div class="footer-section footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                    <li><a href="TermsOfUse.html">Terms of Use</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SPECX. All rights reserved.</p>
+            <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+        </div>
+    </footer>
+
+    <script src="js/create_account.js"></script>
+</body>
+</html>

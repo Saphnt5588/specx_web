@@ -1,0 +1,290 @@
+/* --- Global Styles --- */
+body {
+    background-color: aliceblue;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Base image styling - applied to the hero image at the top */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Important for preventing extra space below images */
+}
+
+/* --- Header and Nav Bar (Kept mostly the same) ---*/
+#grad1 {
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #3335cd, #000000);
+}
+
+#grad1 a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: aliceblue;
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+#grad1 a.login-link {
+    float: right;
+}
+
+#grad1 a:hover {
+    background-color: #8ae2eb;
+    color: black; /* Changed to black for better contrast on hover */
+}
+
+.active {
+    background-color: aliceblue;
+    color: #ac7aed;
+}
+
+/* Search Bar */
+.search-bar {
+    float: left;
+    padding: 10px 16px;
+    margin: 10px;
+}
+
+.search-bar input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ac7aed;
+    color: aliceblue;
+    transition: background-color 0.3s;
+}
+/* --- END Header and Nav Bar --- */
+
+
+/* --- NEWS ARTICLE STYLING (The main focus) --- */
+
+/* 1. News Grid Layout (Using CSS Grid for better responsiveness) */
+.product-grid {
+    /* Use Grid instead of Flex for a dedicated multi-column layout */
+    display: grid;
+    /* Create three equally sized columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Increased gap for better visual separation */
+    max-width: 1200px; /* Constrain the width of the grid */
+    margin: 50px auto; /* Center the grid on the page and add vertical margin */
+    padding: 0 20px; /* Add padding on the sides for smaller screens */
+}
+
+/* 2. Article Container Coherence */
+.product-container {
+    padding: 15px; /* Slightly less padding to focus content */
+    border: 1px solid #e0e0e0; /* Lighter border for a softer look */
+    border-radius: 10px; /* Slightly more rounded corners */
+    background-color: #ffffff; /* White background for better contrast */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 0; /* Remove existing margin as 'gap' handles spacing */
+    height: 100%; /* Important: makes all containers the same height in the grid row */
+    display: flex; /* Use flexbox to organize content vertically */
+    flex-direction: column;
+}
+
+.product-container:hover {
+    transform: translateY(-5px); /* Lift the card subtly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Image Responsiveness and Coherence */
+.product-container img {
+    /* Define a fixed height for images to ensure articles align */
+    height: 200px; 
+    width: 100%; /* Make sure image takes full width of container */
+    /* Use object-fit to cover the area without stretching the image */
+    object-fit: cover; 
+    border-radius: 8px; /* Match container border-radius */
+    margin-bottom: 15px; /* Add space below the image */
+}
+
+/* 4. Text Formatting Coherence */
+.product-container h3 {
+    font-size: 1.1em;
+    color: #3335cd; /* Use a color from your palette for the title */
+    margin-top: 0;
+    margin-bottom: 10px;
+    /* Allows the title to take up the space it needs, and pushes other content down */
+    flex-grow: 1; 
+}
+
+.product-container p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    margin-top: auto; /* Pushes the author/read link to the bottom */
+}
+
+.product-container a {
+    color: #ac7aed; /* Use a distinct color for the link */
+    text-decoration: none;
+    font-weight: bold;
+    align-self: flex-start; /* Aligns the link to the left */
+    margin-top: 5px;
+}
+
+.product-container a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* --- RESPONSIVENESS (Media Queries) --- */
+
+/* Tablet View (e.g., screens between 601px and 1024px) */
+@media (max-width: 1024px) {
+    .product-grid {
+        /* Change to 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile View (e.g., screens up to 600px) */
+@media (max-width: 600px) {
+    .product-grid {
+        /* Change to 1 column on mobile phones (stack them) */
+        grid-template-columns: 1fr;
+        gap: 25px; /* Adjust vertical gap for stacked articles */
+    }
+
+    .product-container img {
+        height: 150px; /* Reduce image height on small screens */
+    }
+    
+    /* Navigation bar changes for mobile */
+    #grad1 a:not(.login-link) {
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 10px 16px;
+    }
+    
+    .search-bar {
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px 16px;
+    }
+    
+    .search-bar input[type="text"], .search-bar button {
+        width: calc(50% - 18px); /* Adjust width to fit two elements side-by-side */
+        box-sizing: border-box;
+    }
+}
+
+/* --- Footer --- */
+/* --- BASE FOOTER STYLES --- */
+.modern-footer {
+    background-color: #1a1a1a; /* Dark background is sleek and modern */
+    color: #f0f0f0; /* Light text for high contrast */
+    padding: 40px 20px 20px; /* Generous padding */
+    font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* --- MAIN CONTAINER (for Flexbox layout) --- */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- SECTION STYLES --- */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too narrow */
+    margin: 15px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+    color: #ac7aed; /* A pop of accent color (e.g., green for gaming/tech) */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- LINK STYLES --- */
+.modern-footer a {
+    color: #cccccc; /* Slightly darker link color */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.modern-footer a:hover {
+    color: #4CAF50; /* Highlight color on hover */
+    text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.social-links a:hover {
+    color: #ac7aed;
+    transform: scale(1.1);
+}
+
+/* --- RESOURCE LINKS (Vertical List) --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom .credit a {
+    color: #999;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}

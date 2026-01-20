@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News</title>
+        <link rel="icon" type="image/x-icon" href="images\SPECX Favicon (48 x 48 px).png">
+        <link rel="stylesheet" href="css/news.css">
+    </head>
+    <body>
+        <div id="grad1">
+            <a href="index.html">Home</a>
+            <a class="active" href="news.html" style="color: #ac7aed;" onmouseover="this.style.color='aliceblue';" onmouseout="this.style.color='#ac7aed';">News</a>
+            <a href="products.html ">Products</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <form class="search-bar" action="/search" method="get">
+                <input type="text" placeholder="Search..." name="q">
+                <button type="submit">Search</button>
+            </form>
+            <a class="login-link" href="login.html">Login</a>
+            <a class="login-link" href="CreateAccount.html">Create Account</a>
+            
+        </div>
+        
+        <section class="tech-news-feed">
+            <h2>Latest Tech News</h2>
+
+            <div class="articles-container">
+
+                <!-- Article 1 -->
+                <article class="news-card">
+                    <a href="AIModelAchievesTest.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images/Gemini_Generated_Image.png" alt="AI-generated artwork" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Artificial Intelligence</span>
+                            <h3 class="article-title">New AI Model Achieves Near-Human Empathy Scores in Latest Tests</h3>
+                            <p class="article-summary">A groundbreaking development in neural networks pushes the boundaries of emotional understanding in machine learning.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 13, 2025</span>
+                            <span class="meta-source">| TechWire Daily</span>
+                            </footer>
+                    </a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="news-card">
+                    <a href="QuantumComputingChip.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images/QuantumComputing.png" alt="Quantum computing chip" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Hardware</span>
+                            <h3 class="article-title">Quantum Computing Chip Breaks Efficiency Records in Cool-Down Phase</h3>
+                            <p class="article-summary">Engineers unveil a new thermal management system that drastically reduces the energy cost of quantum operations.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 12, 2025</span>
+                            <span class="meta-source">| Global Tech Review</span>
+                        </footer>
+                    </a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="news-card">
+                    <a href="ZeroDayVulnerabilituy.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images\Zero_Day_Image.png" alt="Cybersecurity lock icon" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Cybersecurity</span>
+                            <h3 class="article-title">Zero-Day Vulnerability Found in Popular Browser: Urgent Patch Released</h3>
+                            <p class="article-summary">Security researchers urge users to update immediately to mitigate a critical threat discovered in a recent audit.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 11, 2025</span>
+                            <span class="meta-source">| CyberSec Monthly</span>
+                        </footer>
+                    </a>
+                </article>
+
+                <!-- Article 4 (FIXED: Now inside .articles-container) -->
+                <article class="news-card">
+                    <a href="PrivateSatelliteFleet.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images\Satelite_Image.png" alt="Decentralized Internet Mesh" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Space Tech</span>
+                            <h3 class="article-title">Private Satellite Fleet Successfully Deploys Decentralized Internet Mesh</h3>
+                            <p class="article-summary">The first phase of a new low-orbit satellite constellation promises to deliver high-speed, censorship-resistant internet access globally.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 10, 2025</span>
+                            <span class="meta-source">| AetherNet News</span>
+                        </footer>
+                    </a>
+                </article>
+
+                <!-- Article 5 (FIXED: Now inside .articles-container) -->
+                <article class="news-card">
+                    <a href="AuraGlasses.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images/Lense_Image.png" alt="'Aura' AR Glasses" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Augmented Reality</span>
+                            <h3 class="article-title">'Aura' Glasses Hit Shelves, Redefining Workplace Collaboration</h3>
+                            <p class="article-summary">Lightweight AR glasses featuring dynamic 3D rendering and real-time data overlay are set to revolutionize virtual meetings and industrial design.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 9, 2025</span>
+                            <span class="meta-source">| Future Gadget</span>
+                        </footer>
+                    </a>
+                </article>
+                
+                <!-- Article 6 (FIXED: Now inside .articles-container) -->
+                <article class="news-card">
+                    <a href="BreakthroughBioBattery.html" class="card-link">
+                        <div class="card-image-wrapper">
+                            <img src="images\BioBattery_Image.png" alt="Bio-Battery Technology" class="article-image">
+                        </div>
+                        <div class="card-content">
+                            <span class="article-category">Sustainability</span>
+                            <h3 class="article-title">Breakthrough in Bio-Battery Tech Promises Week-Long Phone Charge</h3>
+                            <p class="article-summary">Researchers have developed a biodegradable battery utilizing organic compounds that boasts four times the energy density of current lithium-ion cells.</p>
+                        </div>
+                        <footer class="article-meta">
+                            <span class="meta-date">October 8, 2025</span>
+                            <span class="meta-source">| Green Tech Review</span>
+                        </footer>
+                    </a>
+                </article>
+            
+            </div>
+        </section>
+    </body>
+    <footer class="modern-footer">
+    <div class="footer-container">
+
+        <div class="footer-section footer-contact">
+            <h3>SPECX</h3>
+            <p>Your destination for gaming enthusiasts.</p>
+            <p>Email: <a href="mailto:acostaolga94@gmail.com">Contact Us</a></p>
+        </div>
+
+        <div class="footer-section footer-links">
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                <li><a href="TermsOfUse.html">Terms of Use</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 SPECX. All rights reserved.</p>
+        <p class="credit">Prodcuts and Images Credit To: <a href="https://www.ea.com/" target="_blank">EA</a></p>
+    </div>
+</footer>
+</html>

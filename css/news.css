@@ -1,0 +1,286 @@
+/* Header and nav bar*/
+#grad1 {
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #3335cd, #000000);
+}
+
+#grad1 a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+#grad1 a.login-link {
+    float: right;
+}
+
+#grad1 a:hover {
+    background-color: #8ae2eb;
+    color: aliceblue;
+}
+
+.active {
+    background-color: aliceblue;
+    color: #ac7aed;
+}
+
+/* New CSS for the Search Bar */
+.search-bar {
+    float:left;
+    padding: 10px 16px; /* Adjust padding to align with links */
+    margin: 10px; /* Add margin to space it from other elements */
+    
+}
+
+.search-bar input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Makes the search bar rounded */
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ac7aed;
+    color: aliceblue;
+}
+
+/*Body*/
+body {
+    background-color: aliceblue;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+/* --- BASE FOOTER STYLES --- */
+.modern-footer {
+    background-color: #1a1a1a; /* Dark background is sleek and modern */
+    color: #f0f0f0; /* Light text for high contrast */
+    padding: 40px 20px 20px; /* Generous padding */
+    font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* --- MAIN CONTAINER (for Flexbox layout) --- */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- SECTION STYLES --- */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too narrow */
+    margin: 15px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+    color: #ac7aed; /* A pop of accent color (e.g., green for gaming/tech) */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- LINK STYLES --- */
+.modern-footer a {
+    color: #cccccc; /* Slightly darker link color */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.modern-footer a:hover {
+    color: #4CAF50; /* Highlight color on hover */
+    text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.social-links a:hover {
+    color: #ac7aed;
+    transform: scale(1.1);
+}
+
+/* --- RESOURCE LINKS (Vertical List) --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom .credit a {
+    color: #999;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* --- TECH NEWS FEED STYLES START HERE --- */
+.tech-news-feed {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.tech-news-feed h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #3335cd; /* Using a darker blue from your gradient */
+    margin-bottom: 30px;
+    border-bottom: 3px solid #ac7aed; /* Using your purple accent color */
+    padding-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.articles-container {
+    display: grid;
+    /* Responsive grid: 3 columns on large screens, automatically adjusts */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+}
+
+/* --- Individual Card Styling --- */
+.news-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(172, 122, 237, 0.4); /* Hover shadow with your accent color */
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .article-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.article-category {
+    display: inline-block;
+    background-color: #ac7aed; /* Your purple accent color */
+    color: aliceblue;
+    font-size: 0.75em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.article-title {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.article-summary {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.article-meta {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.8em;
+    color: #999;
+    margin-top: auto;
+}
+
+.meta-source {
+    font-weight: bold;
+}
+
+/* --- Media Query for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .tech-news-feed {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .tech-news-feed h2 {
+        font-size: 2em;
+    }
+
+    /* Grid will collapse to a single column on smaller screens */
+    .articles-container {
+        gap: 20px;
+    }
+}

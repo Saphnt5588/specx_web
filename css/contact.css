@@ -1,0 +1,270 @@
+
+:root {
+  --color-primary: #003366;
+  --color-secondary: #007bff;
+  --color-accent: #66b2ff;
+  --color-bg: #f7f8fa;
+  --color-text: #222;
+  --border-radius: 8px;
+  --font-stack: "Segoe UI", Roboto, sans-serif;
+}
+
+/* General Layout */
+body {
+    background-color: aliceblue;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+#grad1 {
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #3335cd, #000000);
+}
+
+#grad1 a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+#grad1 a.login-link {
+    float: right;
+}
+
+#grad1 a:hover {
+    background-color: #8ae2eb;
+    color: aliceblue;
+}
+
+.active {
+    background-color: aliceblue;
+    color: #ac7aed;
+}
+
+/* New CSS for the Search Bar */
+.search-bar {
+    float:left;
+    padding: 10px 16px; /* Adjust padding to align with links */
+    margin: 10px; /* Add margin to space it from other elements */
+    
+}
+
+.search-bar input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Makes the search bar rounded */
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ac7aed;
+    color: aliceblue;
+}
+.login-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Page Title */
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-top: 2rem;
+}
+
+/* Contact Form Container */
+.container {
+  max-width: 600px;
+  margin: 2rem auto 4rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.container input[type="text"],
+.container select,
+.container textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: #fafbff;
+  transition: all 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container select:focus,
+.container textarea:focus {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  background-color: white;
+  outline: none;
+}
+
+/* Submit Button */
+.container input[type="submit"] {
+  width: 100%;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 64, 128, 0.2);
+}
+
+.container input[type="submit"]:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #004080, #0080ff);
+  box-shadow: 0 6px 18px rgba(0, 64, 128, 0.3);
+}
+
+/* Footer */
+/* --- BASE FOOTER STYLES --- */
+.modern-footer {
+    background-color: #1a1a1a; /* Dark background is sleek and modern */
+    color: #f0f0f0; /* Light text for high contrast */
+    padding: 40px 20px 20px; /* Generous padding */
+    font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* --- MAIN CONTAINER (for Flexbox layout) --- */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- SECTION STYLES --- */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too narrow */
+    margin: 15px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+    color: #ac7aed; /* A pop of accent color (e.g., green for gaming/tech) */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- LINK STYLES --- */
+.modern-footer a {
+    color: #cccccc; /* Slightly darker link color */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.modern-footer a:hover {
+    color: #4CAF50; /* Highlight color on hover */
+    text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.social-links a:hover {
+    color: #ac7aed;
+    transform: scale(1.1);
+}
+
+/* --- RESOURCE LINKS (Vertical List) --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom .credit a {
+    color: #999;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-bottom: 1rem;
+  }
+
+  .search-bar {
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,283 @@
+
+/* New rule to group the login and create account links */
+.auth-links {
+    display: flex; /* Keeps the login links side-by-side */
+    align-items: center;
+    margin-left: auto; /* Pushes the entire group to the right */
+}
+
+/* --- Global & Body Styling (Using your provided styles) --- */
+body {
+    background-color: aliceblue;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- Header and nav bar (Using your provided styles) --- */
+#grad1 {
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    /* Adjusted to use flexbox for better alignment, overriding your 'float' based system */
+    display: flex; 
+    align-items: center;
+    background-image: linear-gradient(to right, #3335cd, #000000);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#grad1 a {
+    /* float: left; - Removed due to flexbox */
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: aliceblue;
+    /* Ensure links don't shrink */
+    flex-shrink: 0; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#grad1 a.login-link {
+    /* float: right; - Removed due to flexbox, using margin-left: auto instead */
+    margin-left: auto;
+}
+
+#grad1 a:hover {
+    background-color: #8ae2eb;
+    color: #000; /* Changed hover color to black for contrast with light background */
+}
+
+.active {
+    background-color: aliceblue;
+    color: #ac7aed;
+    /* Ensure active link doesn't follow hover color */
+    pointer-events: none; 
+}
+
+/* Search Bar (Using your provided styles, adapted for flexbox) */
+.search-bar {
+    /* float:left; - Removed due to flexbox */
+    padding: 0 16px; 
+    margin: 0 10px; /* Space it from the last nav link */
+    display: flex; /* Ensures input and button are side-by-side */
+    align-items: center;
+    /* Pushes search bar to the right if there's space */
+    margin-right: 15px; 
+}
+
+.search-bar input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-bar button {
+    border: 1px solid #ac7aed; /* Changed border to match button color */
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #ac7aed;
+    color: aliceblue;
+    margin-left: 5px; /* Small space between input and button */
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #7b58c7; /* Darker shade on hover */
+}
+
+
+/* --- Main Product Listing Styling (From previous response, adapted to new body font) --- */
+
+.products-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.products-container h1 {
+    text-align: center;
+    color: #3335cd; /* Using a color from the header gradient */
+    margin-bottom: 5px;
+}
+
+.section-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: grid;
+    /* Responsive columns: 3 columns on desktop, less on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px; 
+}
+
+/* Individual Product Card Styling */
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #3335cd;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-card .description {
+    color: #666;
+    font-size: 0.9em;
+    height: 40px; 
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.buy-button {
+    background-color: #ac7aed;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #7b58c7;
+}
+
+
+/* --- Footer Styling (Using your provided styles) --- */
+/* --- BASE FOOTER STYLES --- */
+.modern-footer {
+    background-color: #1a1a1a; /* Dark background is sleek and modern */
+    color: #f0f0f0; /* Light text for high contrast */
+    padding: 40px 20px 20px; /* Generous padding */
+    font-family: 'Arial', sans-serif; /* Use a modern, readable font */
+}
+
+/* --- MAIN CONTAINER (for Flexbox layout) --- */
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space between sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333; /* Subtle separator line */
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+}
+
+/* --- SECTION STYLES --- */
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensure sections don't get too narrow */
+    margin: 15px;
+}
+
+.footer-section h3, 
+.footer-section h4 {
+    color: #ac7aed; /* A pop of accent color (e.g., green for gaming/tech) */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- LINK STYLES --- */
+.modern-footer a {
+    color: #cccccc; /* Slightly darker link color */
+    text-decoration: none; /* Remove underlines for a cleaner look */
+    transition: color 0.3s ease;
+}
+
+.modern-footer a:hover {
+    color: #4CAF50; /* Highlight color on hover */
+    text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* --- SOCIAL LINKS --- */
+.social-links a {
+    font-size: 24px;
+    margin-right: 15px;
+    display: inline-block;
+    color: #f0f0f0;
+}
+
+.social-links a:hover {
+    color: #ac7aed;
+    transform: scale(1.1);
+}
+
+/* --- RESOURCE LINKS (Vertical List) --- */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+/* --- BOTTOM COPYRIGHT BAR --- */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-bottom .credit a {
+    color: #999;
+}
+
+/* --- RESPONSIVENESS (for smaller screens) --- */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+        align-items: center;
+    }
+    .footer-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
